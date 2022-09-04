@@ -48,8 +48,8 @@ const categoryData = (data) => {
                             <img src="${data.author.img}" class='rounded-5' width="50" alt="sdfsdf" />
                         </div>
                         <div>
-                            ${data.author.name}
-                            <br /><small>${data.author.published_date}</small>
+                            ${data.author.name ? data.author.name : "No data available"}
+                            <br /><small>${data.author.published_date ? data.author.published_date : "No date available"}</small>
                         </div>
                         </div>
                         <div class="col-md-2">
@@ -75,8 +75,8 @@ const categoryData = (data) => {
         `;
     });
     if(data.length == 0){
-        thumbNews.innerHTML = `<p class="text-center text-danger">No Data Found</p>`;
-        console.log("No Data")
+        thumbNews.innerHTML = `<p class="text-center text-danger bebas-neue">No News Found</p>`;
+        // console.log("No Data")
     }else{
         thumbNews.innerHTML = htmlSegment;
     }
