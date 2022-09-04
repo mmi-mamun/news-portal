@@ -38,7 +38,7 @@ const categoryData = (data) => {
                 <div class="card-body">
                     <h5 class="card-title" data-bs-toggle="modal"
                     data-bs-target="#newsDetailsModal" onclick="newsModal('${data._id}')">${data.title}</h5>
-                    <p class="card-text">
+                    <p class="card-text my-5 bebas-neue">
                         ${data.details.slice(0, 250)}...
                     </p>
 
