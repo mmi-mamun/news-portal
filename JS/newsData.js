@@ -1,4 +1,5 @@
 const getCategoryID = (category_id) => {
+    togglerSpiner(true);
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id} `;
     fetch(url)
         .then(res => res.json())
@@ -79,6 +80,6 @@ const categoryData = (data) => {
     }else{
         thumbNews.innerHTML = htmlSegment;
     }
-    
+    togglerSpiner(false);
 }
 

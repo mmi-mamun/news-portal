@@ -3,12 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Assignment: 6 ~ News portal</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <!-- Link with external CSS  -->
@@ -16,88 +23,125 @@
   </head>
   <body class="container">
     <header>
-      <!-- Navbar Start -->
-      <nav class="navbar navbar-expand-lg bg-light fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <h1 class="poppins fw-bold">Musafir News</h1>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
-              <li class="nav-item mx-5">
-                <a
-                  class="nav-link active poppins"
-                  aria-current="page"
-                  href="index.html"
+      <section class="mb-3 p-0">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">
+              <h1 class="poppins fw-bold">Musafir News</h1>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-5">
+                  <a
+                    class="nav-link active poppins"
+                    aria-current="page"
+                    href="index.html"
+                  >
+                    News
+                  </a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a
+                    class="nav-link poppins"
+                    aria-current="page"
+                    href="blog.html"
+                  >
+                    Blog
+                  </a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <button
+                  class="btn btn-outline-info"
+                  type="submit"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalform"
                 >
-                  News
-                </a>
-              </li>
-              <li class="nav-item mx-3">
-                <a
-                  class="nav-link active poppins"
-                  aria-current="page"
-                  href="blog.html"
-                >
-                  Blog
-                </a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <button
-                class="btn btn-outline-info"
-                type="submit"
-                data-bs-toggle="modal"
-                data-bs-target="#modalform"
-              >
-                Register Now
-              </button>
-            </form>
+                  Register Now
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-      </nav>
-      <!-- Navbar End -->
+        </nav>
+        <!-- Navbar End -->
+      </section>
     </header>
 
-    <main class="mt-5 pt-5">
+    <main class="my-5">
       <!-- News Catagory Section Start  -->
-      <section class="container my-3">
+      <section class="container my-5">
         <div class="d-flex justify-content-between" id="news-category"></div>
       </section>
-      <!-- News Catagory Section Start  -->
+      <!-- News Catagory Section End  -->
 
-      <!-- Alert for empty News Section Start  -->
-      <section>
-        <div class="alert alert-primary" id="newsFound" role="alert"></div>
-      </section>
-      <!-- Alert for empty News Section End  -->
+      <!-- Alert for empty News Portion Start  -->
+      <div class="alert alert-primary mt-5" id="newsFound" role="alert"></div>
+      <!-- Alert for empty News Portion End  -->
 
-      <!-- News feed or news Data section start  -->
+      <!-- News feed or news Data section Start  -->
       <section class="my-5" id="shortNews"></section>
       <!-- News feed or news Data section End  -->
+
+      <!-- Modal Section Start  -->
+      <section>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="newsDetailsModal"
+          tabindex="-1"
+          aria-labelledby="newsDetailsModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-fullscreen-xxl-down">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="newsTitle"></h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body" id="news-details"></div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Modal Section End  -->
     </main>
 
-    <footer></footer>
+    <footer>
+      <h6 class="text-center my-2 py-5 border">Copyright 2021 News Portal</h6>
+    </footer>
 
-    <!-- Script file  -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <!-- External Script files -->
     <script src="JS/newsCategory.js"></script>
-    <script src="JS/newsFeed.js"></script>
+    <script src="JS/newsData.js"></script>
   </body>
 </html>
