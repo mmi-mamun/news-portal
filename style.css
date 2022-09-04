@@ -18,7 +18,5 @@
 }
 .active {
   color: #fff;
-}
-.active {
-  background: blue;
+  background-color: darksalmon;
 }

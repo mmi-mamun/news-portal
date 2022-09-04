@@ -83,52 +83,111 @@
     <main class="poppins">
       <section>
         <div class="header">
-          <h2>You get 4 answer of questions from this blog</h2>
+          <h2 class="bebas-neue text-center text-secondary">
+            I'm sharing the <strong>answers</strong> of four
+            <strong>Questions</strong>.
+          </h2>
         </div>
 
         <div class="row">
           <div class="leftcolumn">
-            <div class="card">
-              <h2 class="text-center">
+            <div class="card my-5">
+              <h2 class="bebas-neue text-center text-success">
                 <strong> var </strong> vs <strong> let </strong> vs
                 <strong>const</strong>
               </h2>
               <div class="fakeimg" style="min-height: 300px">
-                <p><strong>var: </strong> <br /></p>
+                <p>
+                  <strong>var: </strong> The scope of a var variable is
+                  functional scope. It can be updated and re-declared into the
+                  scope. It can be declared without initialization. It can be
+                  accessed without initialization as its default value is
+                  “undefined”. <br />
+                </p>
 
                 <p>
-                  <strong>let: </strong>
+                  <strong>let: </strong> The scope of a let variable is block
+                  scope. It can be updated but cannot be re-declared into the
+                  scope. It can be declared without initialization. It cannot be
+                  accessed without initialization otherwise it will give
+                  ‘referenceError’.
                 </p>
                 <p>
-                  <strong>const: </strong>
+                  <strong>const: </strong> The scope of a const variable is
+                  block scope. It cannot be updated or re-declared into the
+                  scope. It cannot be declared without initialization. It cannot
+                  be accessed without initialization, as it cannot be declared
+                  without initialization.
                 </p>
               </div>
             </div>
 
             <div class="card">
-              <h2 class="bebas-neue">
+              <h2 class="bebas-neue text-center text-success">
                 <strong>Arrow function</strong> vs
                 <strong>Regular function</strong>
               </h2>
               <br />
               <div class="fakeimg" style="min-height: 400px">
-                <p>some text</p>
+                <p>
+                  Arrow functions – a new feature introduced in ES6 – enable
+                  writing concise functions in JavaScript. While both regular
+                  and arrow functions work in a similar manner, yet there are
+                  certain interesting differences between them. <br />
+                  <br />
+                  Regular functions created using function declarations or
+                  expressions are ‘constructible’ and ‘callable’. Since regular
+                  functions are constructible, they can be called using the
+                  ‘new’ keyword. However, the arrow functions are only
+                  ‘callable’ and not constructible. Thus, we will get a run-time
+                  error on trying to construct a non-constructible arrow
+                  functions using the new keyword. <br />
+                  <br />
+                  Unlike regular functions, arrow functions do not have their
+                  own this. <br />
+                  <br />
+                  Arguments objects are not available in arrow functions, but
+                  are available in regular functions.
+                </p>
               </div>
             </div>
 
-            <div class="card">
-              <h2 class="bebas-neue">
+            <div class="card mt-5">
+              <h2 class="bebas-neue text-center text-success">
                 <strong
                   >why should we use template string in javascript?</strong
                 >
               </h2>
               <br />
-              <div class="fakeimg" style="min-height: 400px"></div>
+              <div class="fakeimg" style="min-height: 400px">
+                <p>
+                  Template literals is a “new” syntax to the JavaScript
+                  standard, which came in ES6 (ES2015). They can do the same
+                  thing as the normal JavaScript string literals, but they have
+                  a couple of new possibilities, which makes them Awesome! The
+                  syntactical difference is that instead of single or double
+                  quotes, you use “back-tics”: ` <br />
+                </p>
+
+                <p>
+                  <strong>Features of Template Literals:</strong> <br />
+                  <span> * String concatenation <br /> </span>
+                  <span> * Multiline strings <br /> </span>
+                  <span> * More functionality <br /> </span>
+                </p>
+
+                <p>
+                  In this post, I have shown why template literals are a great
+                  tool for us JavaScript developers. They are powerful,
+                  practical and easy to use! They allow us to easily both
+                  concatenate and create multiline strings.
+                </p>
+              </div>
             </div>
           </div>
           <div class="rightcolumn">
             <div class="card">
-              <h5 class="text-center">
+              <h5 class="bebas-neue text-center text-success">
                 <small><strong>.forEach()</strong></small> <br />vs <br />
                 <small><strong>.map()</strong></small> <br />
                 vs <br />
@@ -136,24 +195,37 @@
                 <strong>.find()</strong>
               </h5>
               <div class="fakeimg">
-                <strong>.forEach()</strong>
+                <strong>.forEach()</strong> is used to execute the same code on
+                every element in an array but does not change the array and it
+                returns undefined.
               </div>
               <br />
               <div class="fakeimg">
-                <strong>.map()</strong>
+                <strong>.map()</strong> executes the same code on every element
+                in an array and returns a new array with the updated elements.
               </div>
               <br />
               <div class="fakeimg">
-                <strong>.filter()</strong>
+                <strong>.filter()</strong> checks every element in an array to
+                see if it meets a certain criteria and returns a new array with
+                the elements that return truthy for the criteria.
               </div>
               <br />
               <div class="fakeimg">
-                <strong>.find()</strong>
+                <strong>.find()</strong> method returns the value of the first
+                element that passes a test. The find() method executes a
+                function for each array element. The find() method returns
+                undefined if no elements are found. The find() method does not
+                execute the function for empty elements.
               </div>
             </div>
             <div class="card">
-              <h3>Follow Me</h3>
-              <p>Some text..</p>
+              <h3>**References**</h3>
+
+              <small
+                ><br />https://www.w3schools.com/ <br /><br />
+                http://www.gjermundbjaanes.com/javascript-why-template-literals-are-awesome/</small
+              >
             </div>
           </div>
         </div>
@@ -162,7 +234,7 @@
 
     <footer>
       <div class="footer">
-        <h2>Footer</h2>
+        <h2>Thank you for visiting!</h2>
       </div>
     </footer>
   </body>
